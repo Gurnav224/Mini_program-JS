@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreetTask</title>
+    <style>
+        * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #76bd8c;
+}
+.container {
+  font-size: 1.3em;
+  width: 25em;
+  background: linear-gradient(-240deg, #8aeb6d 70%, #91c45f 70%);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 4.5em 1.3em;
+  border-radius: 0.4em;
+  box-shadow: 0 1.3em 1.8em rgba(94, 72, 181, 0.25);
+}
+ .demo  {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  word-spacing: 0.4em;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <p id="demo"></p>
+    </div>
+    <script>
+       const  greetTime = new Date();
+       let hours = greetTime.getHours();
+
+       var greet;
+
+       if(hours<12){
+        greet = "good Morning"
+       }
+       else if(hours>12 && hours<17){
+        greet = "good afternoon"
+        
+       }
+       else if(hours>17 && hours<20){
+        greet = "good evening"
+       }
+       else{
+        greet ="good night"
+       }
+
+       document.getElementById("demo").innerHTML = greet;
+       document.getElementById("demo").style.fontSize= "5rem"
+       document.getElementById("demo").style.fontWeight= "700"
+
+       
+
+    </script>
+</body>
+</html>
